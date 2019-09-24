@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withData } from '../hoc-helpers';
-import SWApiService from '../../services/swapi-service';
+import DBApiService from '../../services/dbapi-service';
 import './item-list.css';
 const ItemList = props => {
     const {data, onItemSelected, children: renderLabel} = props;
@@ -32,6 +32,6 @@ ItemList.propTypes = {
     children: PropTypes.func.isRequired
 };
 
-const { getAllPeople } = new SWApiService();
+const { getCountriesByRegion } = new DBApiService();
 
-export default withData(ItemList, getAllPeople);
+export default withData(ItemList, getCountriesByRegion);

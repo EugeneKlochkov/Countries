@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-
-import ErrorButton from '../error-button/error-button';
-
 import './item-details.css';
 
 const Record = ({item, field, label}) => {
@@ -23,18 +20,18 @@ export default class ItemDetails extends Component {
         this.updateItem();
     }
     componentDidUpdate(prevProps) {
-        if (this.props.itemId !== prevProps.itemId ||
-            this.props.getData !== prevProps.getData ||
+        if (this.props.region !== prevProps.region ||
+            this.props.getCountriesByRegion !== prevProps.getCountriesByRegion ||
             this.props.getImageUrl !== prevProps.getImageUrl) {
             this.updateItem();
         }
     }
 
     updateItem() {
-        const {itemId, getData, getImageUrl} = this.props;
-        if (!itemId) return;
+        const {region, getCountriesByRegion, getImageUrl} = this.props;
+        if (!region) return;
 
-        getData(itemId)
+        getCountriesByRegion(region)
             .then((item) => {
                 this.setState({
                     item,
@@ -68,7 +65,6 @@ export default class ItemDetails extends Component {
                             })
                         }
                     </ul>
-                    <ErrorButton/>
                 </div>
             </div>
     )

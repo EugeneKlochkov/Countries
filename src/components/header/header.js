@@ -3,12 +3,15 @@ import {Link} from 'react-router-dom';
 
 import './header.css';
 
-const Header = ({onServiceChange}) => {
+const Header = () => {
     return (
         <div className="header d-flex">
             <h3>
+                <svg className="flag-earth">
+                    <use xlinkHref="#flag"></use>
+                </svg>
                 <Link to="/">
-                    Countries Directory
+                    World Countries
                 </Link>
             </h3>
             <ul className="d-flex">
@@ -27,20 +30,7 @@ const Header = ({onServiceChange}) => {
                 <li>
                     <Link to="/region/oceania/">Oceania</Link>
                 </li>
-
-                <li>
-                    <Link to="/login">Login</Link>
-                </li>
-                <li>
-                    <Link to="/secret">Secret</Link>
-                </li>
             </ul>
-
-            <button
-                onClick={onServiceChange}
-                className="btn btn-primary btn-sm">
-                Change Service
-            </button>
         </div>
     );
 };

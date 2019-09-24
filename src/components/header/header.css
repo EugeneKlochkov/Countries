@@ -1,6 +1,7 @@
 .header {
   margin-top: .5rem;
   padding-left: 10px;
+  align-items: center;
 }
 
 .header ul li {

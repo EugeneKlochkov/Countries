@@ -22,7 +22,7 @@ const withData = View => {
         loading: true,
         error: false
       });
-      this.props.getData()
+      this.props.getCountriesByRegion()
         .then(data => {
           this.setState({
             data,

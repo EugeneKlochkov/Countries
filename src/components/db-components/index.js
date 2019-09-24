@@ -1,17 +1,4 @@
-import Country from './person-details';
-import Countries from './planet-details';
+import Country from './country';
+import { ListCountries } from './item-lists';
 
-import {
-  Country,
-  Countries,
-
-} from './item-lists';
-
-export {
-  PersonDetails,
-  PlanetDetails,
-  StarShipDetails,
-  PersonList,
-  PlanetList,
-  StarShipList
-};
+export {  ListCountries, Country };

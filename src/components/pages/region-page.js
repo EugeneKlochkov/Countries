@@ -1,17 +1,17 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Countries, ListCountries } from '../db-components';
+import { Country, ListCountries } from '../db-components';
 import Row from '../row/row';
 
-const ListCountriesByRegion = ({ history, match }) => {
+const RegionPage = ({ history, match }) => {
 
-  const { region } = match.params;
+  const { code } = match.params;
 
   return (
     <Row
-      left={<ListCountries onItemSelected={(region) => history.push(region)} />}
-      right={<Countries region={region} />} />
+      left={<ListCountries onItemSelected={(code) => history.push(code)} />}
+      right={<Country code={code} />} />
   );
 };
 
-export default withRouter(ListCountriesByRegion);
+export default withRouter(RegionPage);

@@ -26,9 +26,8 @@ export default class  DBApiService {
     };
     getCountriesByRegion = async region => {
         const countries = await this.getResource(`/rest/v2/region/${region}`);
-        return countries.results
-            .map(DBApiService._transformCountry())
-            .slice(0, 5);
+        // console.log(countries);
+        return countries;
     };
 
     /*static _extractCode = item => {

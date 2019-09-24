@@ -2,7 +2,7 @@ import React from 'react';
 import ItemDetails, { Record } from '../item-details/item-details';
 import { withDBApiService } from '../hoc-helpers';
 
-const Countries = (props) => {
+const Country = (props) => {
   return (
     <ItemDetails {...props} >
       <Record field="name" label="Country" />
@@ -17,4 +17,4 @@ const mapMethodsToProps = (DBApiService) => {
   }
 };
 
-export default withDBApiService(mapMethodsToProps)(Countries);
+export default withDBApiService(mapMethodsToProps)(Country);

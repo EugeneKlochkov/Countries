@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withData } from '../hoc-helpers';
 import DBApiService from '../../services/dbapi-service';
-import './list.css';
-const List = props => {
+import './list-countries.css';
+const ListCountries = props => {
     const {data, onItemSelected, children: renderLabel} = props;
     const items = data.map((item) => {
         const {code} = item,
@@ -22,16 +22,16 @@ const List = props => {
     );
 };
 
-List.defaultProps = {
+ListCountries.defaultProps = {
     onItemSelected: () => {}
 };
 
-List.propTypes = {
+ListCountries.propTypes = {
     onItemSelected: PropTypes.func,
     data: PropTypes.arrayOf(PropTypes.object).isRequired,
     children: PropTypes.func.isRequired
 };
 
-const { getAllPeople } = new DBApiService();
+const { getCountriesByRegion } = new DBApiService();
 
-export default withData(List, getAllPeople);
+export default withData(ListCountries, getCountriesByRegion);

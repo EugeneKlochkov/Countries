@@ -1,3 +1,6 @@
+body {
+  background-color: #ccc;
+}
 .App {
   text-align: center;
 }
@@ -30,4 +33,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+.title {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.flag-earth {
+  width: 70px;
+  height: 50px;
+}
+
+.country-props {
+  list-style-type: none;
 }
