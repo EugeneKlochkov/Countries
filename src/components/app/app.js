@@ -7,11 +7,9 @@ import DBApiService from "../../services/dbapi-service";
 import ErrorBoundry from "../error-boundry/error-boundry";
 import Header from "../header/header";
 import RandomCountry from "../random-country/random-country";
+import Region from "../db-components/region";
 
 import './app.css';
-// import {ListCountries} from "../db-components";
-// import {RegionPage} from "../pages";
-import Region from "../db-components/region"
 
 export default class App extends Component {
 
@@ -29,14 +27,14 @@ export default class App extends Component {
                             <Header/>
 
                             <Switch>
-                                <Route path="/"
+                                <Route path="/countries/"
                                        render={() => <div>
                                            <h2 className="title">Welcome to application World Countries</h2>
                                            <RandomCountry/>
                                        </div>}
                                        exact
                                 />
-                                <Route path="/region/:region" render={({ match }) => {
+                                <Route path="/countries/region/:region" render={({ match }) => {
                                     const { region } = match.params;
                                     return <Region region={region}/>
                                 }} />
