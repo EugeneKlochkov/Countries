@@ -15,21 +15,21 @@ const Header = () => {
                 </Link>
             </h3>
             <ul className="d-flex">
-                <li>
-                    <Link to="/countries/region/africa/">Africa</Link>
-                </li>
-                <li>
-                    <Link to="/countries/region/americas/">Americas</Link>
-                </li>
-                <li>
-                    <Link to="/countries/region/asia/">Asia</Link>
-                </li>
-                <li>
-                    <Link to="/countries/region/europe/">Europe</Link>
-                </li>
-                <li>
-                    <Link to="/countries/region/oceania/">Oceania</Link>
-                </li>
+                <Link to="/countries/region/africa/">
+                    <li>Africa</li>
+                </Link>
+                <Link to="/countries/region/americas/">
+                    <li>Americas</li>
+                </Link>
+                <Link to="/countries/region/asia/">
+                    <li>Asia</li>
+                </Link>
+                <Link to="/countries/region/europe/">
+                    <li>Europe</li>
+                </Link>
+                <Link to="/countries/region/oceania/">
+                    <li>Oceania</li>
+                </Link>
             </ul>
         </div>
     );
