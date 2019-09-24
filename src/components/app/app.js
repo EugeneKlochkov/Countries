@@ -29,14 +29,14 @@ export default class App extends Component {
                             <Header/>
 
                             <Switch>
-                                <Route path="/countries/"
+                                <Route path="/"
                                        render={() => <div>
                                            <h2 className="title">Welcome to application World Countries</h2>
                                            <RandomCountry/>
                                        </div>}
                                        exact
                                 />
-                                <Route path="/countries/region/:region" render={({ match }) => {
+                                <Route path="/region/:region" render={({ match }) => {
                                     const { region } = match.params;
                                     return <Region region={region}/>
                                 }} />
